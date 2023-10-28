@@ -2,9 +2,10 @@
 # Script to build image for qemu.
 # Author: Siddhant Jajoo.
 
-git submodule init
-git submodule sync
-git submodule update
+# Change the poky to specific branch
+cd poky
+git checkout kirkstone
+cd ..
 
 # local.conf won't exist until this step on first execution
 source poky/oe-init-build-env
